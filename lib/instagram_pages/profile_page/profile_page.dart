@@ -122,7 +122,7 @@ class _profile_pageState extends State<profile_page> {
               Expanded(
                 child: Container(
                   margin: EdgeInsets.all(10),
-                  height: MediaQuery.of(context).size.width - 0,
+                  height: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.5),
                       borderRadius: BorderRadius.circular(25)),
