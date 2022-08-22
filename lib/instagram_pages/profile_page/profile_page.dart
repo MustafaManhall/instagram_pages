@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_pages/instagram_pages/home_page/home_page.dart';
+import '../../data/data.dart';
 import '../explore_page/explore_page.dart';
 
 class profile_page extends StatefulWidget {
-  const profile_page({Key? key}) : super(key: key);
+  final String profileimage;
+  final String Name;
+  profile_page({
+    required this.profileimage,
+    required this.Name,
+});
 
   @override
   State<profile_page> createState() => _profile_pageState();
@@ -57,7 +63,7 @@ class _profile_pageState extends State<profile_page> {
               GestureDetector(
                 onTap: (){
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => profile_page())
+                      MaterialPageRoute(builder: (context) => profile_page(profileimage: avatarimage,Name: "MUstafa",))
                   );
                 },
                 child: Icon(Icons.person_outline,color: Colors.white,
@@ -76,9 +82,7 @@ class _profile_pageState extends State<profile_page> {
                   children: [
                     GestureDetector(
                       onTap: (){
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => home_page())
-                        );
+                        Navigator.of(context).pop();
                       },
                       child: Icon(Icons.arrow_back_ios,
                         size: 30,),
@@ -86,7 +90,10 @@ class _profile_pageState extends State<profile_page> {
                     GestureDetector(
                       onTap: (){
                         Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => profile_page())
+                            MaterialPageRoute(builder: (context) => profile_page(
+                            profileimage: "https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg",
+                              Name: "MUstafa",
+                            ))
                         );
                       },
                       child: Icon(Icons.notifications_active,
@@ -100,9 +107,10 @@ class _profile_pageState extends State<profile_page> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   profile_info(
-                      "https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg",
-                      "Zahara",
-                      "USA"),
+                      widget.profileimage,
+                      widget.Name,
+                      acconutlocation
+                      ),
                 ],
               ),
               SizedBox(
@@ -111,9 +119,9 @@ class _profile_pageState extends State<profile_page> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  acconut_info(60,"Photo"),
-                  acconut_info(132,"Followers"),
-                  acconut_info(1000,"Following"),
+                  acconut_info(number1,info1),
+                  acconut_info(number2,info2),
+                  acconut_info(number3,info3),
                 ],
               ),
               SizedBox(
@@ -132,26 +140,17 @@ class _profile_pageState extends State<profile_page> {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     children: [
-                      photo(
-                          "https://png.pngtree.com/element_our/20190522/ourlarge/pngtree-real-rose-element-image_1076808.jpg"),
-                      photo(
-                          "https://image.winudf.com/v2/image1/Y29tLmFuYWRvbHUua2lybWl6aWd1bF9zY3JlZW5fYXJfNF8xNTY0Mjg5ODczXzAyOQ/screen-4.jpg?fakeurl=1&type=.jpg"),
-                      photo(
-                          "https://png.pngtree.com/element_our/20190522/ourlarge/pngtree-real-rose-element-image_1076808.jpg"),
-                      photo(
-                          "https://image.winudf.com/v2/image1/Y29tLmFuYWRvbHUua2lybWl6aWd1bF9zY3JlZW5fYXJfNF8xNTY0Mjg5ODczXzAyOQ/screen-4.jpg?fakeurl=1&type=.jpg"),
-                      photo(
-                          "https://png.pngtree.com/element_our/20190522/ourlarge/pngtree-real-rose-element-image_1076808.jpg"),
-                      photo(
-                          "https://image.winudf.com/v2/image1/Y29tLmFuYWRvbHUua2lybWl6aWd1bF9zY3JlZW5fYXJfNF8xNTY0Mjg5ODczXzAyOQ/screen-4.jpg?fakeurl=1&type=.jpg"),
-                      photo(
-                          "https://png.pngtree.com/element_our/20190522/ourlarge/pngtree-real-rose-element-image_1076808.jpg"),
-                      photo(
-                          "https://image.winudf.com/v2/image1/Y29tLmFuYWRvbHUua2lybWl6aWd1bF9zY3JlZW5fYXJfNF8xNTY0Mjg5ODczXzAyOQ/screen-4.jpg?fakeurl=1&type=.jpg"),
-                      photo(
-                          "https://png.pngtree.com/element_our/20190522/ourlarge/pngtree-real-rose-element-image_1076808.jpg"),
-                      photo(
-                          "https://image.winudf.com/v2/image1/Y29tLmFuYWRvbHUua2lybWl6aWd1bF9zY3JlZW5fYXJfNF8xNTY0Mjg5ODczXzAyOQ/screen-4.jpg?fakeurl=1&type=.jpg"),
+                      photo(image_Path),
+                      photo(Image_Path2),
+                      photo(image_Path),
+                      photo(Image_Path2),
+                      photo(image_Path),
+                      photo(Image_Path2),
+                      photo(image_Path),
+                      photo(Image_Path2),
+                      photo(image_Path),
+                      photo(Image_Path2),
+
                     ],
                   ),
                 ),

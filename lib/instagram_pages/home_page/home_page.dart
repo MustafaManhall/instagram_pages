@@ -62,7 +62,10 @@ class _home_pageState extends State<home_page> {
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => profile_page()));
+                    MaterialPageRoute(builder: (context) => profile_page(
+                        profileimage: "https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg",
+                      Name: "MUstafa",
+                    )));
               },
               child: Icon(
                 Icons.person_outline,
@@ -176,7 +179,10 @@ class _home_pageState extends State<home_page> {
           child: GestureDetector(
             onTap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => profile_page()));
+                  MaterialPageRoute(builder: (context) => profile_page(
+                      profileimage: avatar,
+                      Name:name,
+                  )));
             },
             child: CircleAvatar(
               maxRadius: 25,
@@ -197,7 +203,10 @@ class _home_pageState extends State<home_page> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => profile_page()));
+                        builder: (context) => profile_page(
+                          profileimage: "https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg",
+                          Name: "MUstafa",
+                        )));
                   },
                   child: Text(
                     name,
@@ -207,7 +216,10 @@ class _home_pageState extends State<home_page> {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => profile_page()));
+                        builder: (context) => profile_page(
+                            profileimage: "https://st2.depositphotos.com/1104517/11967/v/950/depositphotos_119675554-stock-illustration-male-avatar-profile-picture-vector.jpg",
+                          Name: "MUstafa",
+                        )));
                   },
                   child: Text(
                     location,
